@@ -16,6 +16,10 @@ export default function Home() {
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 药品、补剂、标签图片和比赛期用药风险的合规初筛。
               </p>
+              <p className="mt-2 text-xs font-medium leading-6 text-slate-500">
+                当前规则版本：WADA 2026 禁用清单，2026-01-01 生效；每年 1 月 1
+                日后按官方新版本更新。
+              </p>
             </div>
 
             <a

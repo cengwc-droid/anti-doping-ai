@@ -61,7 +61,7 @@ const CHECKLIST_ITEMS = [
 
 const STATUS_ITEMS = [
   "问答接口已接通",
-  "本地规则检索已接入",
+  "WADA 2026 规则检索已接入",
   "风险提示和免责声明已补齐",
   "提问历史已支持本地保存",
   "提问记录已进入复核后台",
@@ -95,7 +95,7 @@ function createWelcomeMessage(): Message {
           excerpt: "现在这个版本会先查本地规则知识库，再把检索结果交给千问整理答案。",
           source: "系统说明",
           title: "检索增强问答已启用",
-          updatedAt: "2026-04-10",
+          updatedAt: "2026-01-01",
         },
       ],
     },
@@ -533,6 +533,10 @@ export function AntiDopingAssistant() {
       <aside className="space-y-4">
         <div className="rounded-[2rem] border border-cyan-100 bg-cyan-50 p-6">
           <p className="text-sm font-semibold text-cyan-800">当前网站已经具备的闭环</p>
+          <p className="mt-2 text-xs leading-6 text-cyan-900">
+            规则版本：WADA 2026 禁用清单，2026-01-01 生效；每年 1 月 1
+            日后按官方新版本更新。
+          </p>
           <ul className="mt-3 space-y-3 text-sm leading-7 text-slate-700">
             {STATUS_ITEMS.map((item) => (
               <li key={item}>{item}</li>
