@@ -18,7 +18,9 @@ export type QuestionRecord = {
   sourceTitles: string[];
 };
 
-const DATA_DIR = path.join(process.cwd(), "data");
+const DATA_DIR = process.env.VERCEL
+  ? path.join("/tmp", "anti-doping-ai")
+  : path.join(process.cwd(), "data");
 const RECORDS_PATH = path.join(DATA_DIR, "question-records.json");
 
 async function ensureDataFile() {

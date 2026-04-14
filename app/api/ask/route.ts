@@ -172,20 +172,26 @@ async function attachReviewRecord(
   mode: "demo" | "qwen",
   model: string,
 ) {
-  const record = await createQuestionRecord({
-    question,
-    answer: answer.answer,
-    riskLevel: answer.riskLevel,
-    riskSummary: answer.riskSummary,
-    mode,
-    model,
-    sourceTitles: answer.sources.map((source) => source.title),
-  });
+  try {
+    const record = await createQuestionRecord({
+      question,
+      answer: answer.answer,
+      riskLevel: answer.riskLevel,
+      riskSummary: answer.riskSummary,
+      mode,
+      model,
+      sourceTitles: answer.sources.map((source) => source.title),
+    });
 
-  return {
-    ...answer,
-    reviewId: record.id,
-  };
+    return {
+      ...answer,
+      reviewId: record.id,
+    };
+  } catch (error) {
+    console.error("Failed to create review record", error);
+
+    return answer;
+  }
 }
 
 export async function POST(request: Request) {
