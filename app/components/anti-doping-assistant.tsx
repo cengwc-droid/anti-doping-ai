@@ -336,11 +336,11 @@ export function AntiDopingAssistant() {
         <div className="flex flex-wrap items-start justify-between gap-4 border-b border-slate-200 pb-5">
           <div>
             <p className="text-sm font-semibold text-cyan-700">AI 问答台</p>
-            <h2 className="mt-1 text-3xl font-semibold tracking-tight text-slate-950">
-              给运动员的合规问答桌面
+            <h2 className="mt-1 text-2xl font-semibold tracking-tight text-slate-950">
+              合规问答
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-600">
-              现在的网站会先判断风险边界，再给建议。你可以把它当作前台分诊和风险预警入口。
+              输入问题或上传标签图片，系统会返回风险等级、核对项和下一步建议。
             </p>
           </div>
 
